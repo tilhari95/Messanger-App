@@ -15,7 +15,7 @@ public class MessageService {
 	public MessageService()
 	{
 		messages.put(1L, new Message(1, "message 1 ", "suyash"));
-		messages.put(2L, new Message(2, "message 2 ", "suyash"));
+		messages.put(2L, new Message(2, "message 2 ", "suyash _searing95"));
 	}
 	
 	public List<Message> getAllMessages(){
@@ -35,7 +35,7 @@ public class MessageService {
 	
 	public Message updateMessage(Message message)
 	{
-		if(message.getId()<= 0)
+	 	if(message.getId()<= 0)
 			return null;
 		messages.put(message.getId(), message);
 		return message;
