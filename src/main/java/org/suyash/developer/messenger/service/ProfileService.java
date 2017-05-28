@@ -12,16 +12,16 @@ public class ProfileService {
 	private Map<String, Profile> profiles=DatabaseClass.getProfiles();
 	
 	public ProfileService(){
-		profiles.put("searing", new Profile(1L , "Suyash" , "tilhari", "jss"));
-		profiles.put("searing95", new Profile(2L , "Suyash95" , "tilhari95", "jss95"));
+		profiles.put("searing", new Profile(1L , "searing" , "tilhari", "jss"));
+		profiles.put("searing95", new Profile(2L , "searing95" , "tilhari95", "jss95"));
 		}
 	
 	public List<Profile> getAllProfiles(){
 		return new ArrayList<Profile>(profiles.values());
 	}
 	
-	public Profile getProfile(long id){
-		return profiles.get(id);
+	public Profile getProfile(String profileName){
+		return profiles.get(profileName);
 	}
 	
 	public Profile addProfile(Profile Profile)
@@ -39,9 +39,9 @@ public class ProfileService {
 		return Profile;
 	}
 	
-	public Profile deleteProfile(long id)
+	public Profile deleteProfile(String profileName)
 	{
-		return profiles.remove(id);
+		return profiles.remove(profileName);
 	}
 
 }
